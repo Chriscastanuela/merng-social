@@ -6,7 +6,8 @@ const { validateRegisterInput, validateLoginInput } = require('../../util/valida
 const { SECRET_KEY } = require('../../config');
 const User = require('../../models/User');
 
-generateToken = (user) => {
+function generateToken(user) {
+// generateToken = (user) => {
     return jwt.sign(
         {
             id: user.id,
